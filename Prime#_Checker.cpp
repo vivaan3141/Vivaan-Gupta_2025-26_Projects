@@ -7,7 +7,6 @@ int main() {
     cout << "Number: ";
     cin >> num;
     int factors[num/2];
-
     
         for (int i = 2; i <= (num/2); i++) {
         if (num % i==0){
@@ -15,14 +14,10 @@ int main() {
            f++;
            factors[f]=i;
            cout<<i<<", ";
-           
        }
-       
-     
     }
          cout<<endl;
 
-    
     if (c==0){
         cout<<"PRIME NUMBER!"<<endl;
     }else{
@@ -31,14 +26,5 @@ int main() {
        }        
     cout<<"--------------------------------------"<<endl;
     
-    
-    
-   
-
     return 0;
 }
-
-
-
-
-
