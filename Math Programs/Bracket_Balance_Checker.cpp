@@ -4,9 +4,7 @@
 
 using namespace std;
 int main() {
-    string s;
-    cin >> s;
-    stack<char> a;
+    string s; cin >> s; stack<char> a;
 
     for (int i = 0; i < s.length(); i++) {
         if (s[i] == '(' ) {
@@ -17,8 +15,7 @@ int main() {
             }
         }
     }
-    //a==5 || b<6
-    //a==5 && b<6
+    
     if (a.empty()) {
         cout << "Balanced" << endl;
     } else {
