@@ -42,7 +42,7 @@ int main() {
 
     cout<<"Mean: "<<mean<<endl;
     cout<<"Median: "<<median<<endl;
-    cout<<"Sdev: "<<sdev<<" or √("<<devsum/size<<")"<<endl;
+    cout<<"Standard deviation: "<<sdev<<" or √("<<devsum/size<<")"<<endl;
     cout<<"Range: "<<range<<endl;
 
 }
