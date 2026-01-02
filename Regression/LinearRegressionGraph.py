@@ -32,6 +32,7 @@ for i in range(n):
     x[i] = float(input(f"X value {i + 1}\n"))
     y[i] = float(input(f"Y value {i + 1}\n"))
 
+plt.scatter(x, y)
 m = lib.slope(x, y, n)
 b = lib.yInt(x, y, n)
 
@@ -40,14 +41,18 @@ print("Y int =", b)
 
 xPred = float(input("X value for prediction:\n"))
 print((xPred * m) + b)
-
-plt.scatter(x, y)
-plt.plot(xPred,(xPred * m) + b)
+yAc = float(input("*Optional* Actual Y Value:\n"))
 
 
-x1=min(x)
+
+plt.scatter(xPred, (xPred * m) + b,color='red', label="Predicted Value")
+plt.scatter(xPred, yAc, color='green', label="Actual value")
+
+
+
+x1=min(x)/1.5
 y1=(x1*m)+b
-x2=max(x)
+x2=max(x)*1.5
 y2=(x2*m)+b
 plt.plot([x1, x2], [y1, y2])
 
@@ -77,5 +82,7 @@ plt.xlabel('X')
 plt.ylabel('Y')
 plt.title(st)
 plt.grid(True)
+plt.legend()
+
 
 plt.show()
