@@ -41,12 +41,11 @@ print("Y int =", b)
 
 xPred = float(input("X value for prediction:\n"))
 print((xPred * m) + b)
-yAc = float(input("*Optional* Actual Y Value:\n"))
+yAc = float(input("*Optional* Actual Y Value (Copy predicted value in enter it to view graph if you want to skip):\n"))
 
 
-
-plt.scatter(xPred, (xPred * m) + b,color='red', label="Predicted Value")
 plt.scatter(xPred, yAc, color='green', label="Actual value")
+plt.scatter(xPred, (xPred * m) + b,color='red', label="Predicted Value")
 
 
 
