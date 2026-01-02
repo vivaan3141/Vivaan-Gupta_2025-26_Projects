@@ -42,17 +42,40 @@ xPred = float(input("X value for prediction:\n"))
 print((xPred * m) + b)
 
 plt.scatter(x, y)
+plt.plot(xPred,(xPred * m) + b)
 
 
-x1=-100
+x1=min(x)
 y1=(x1*m)+b
-x2=100
+x2=max(x)
 y2=(x2*m)+b
 plt.plot([x1, x2], [y1, y2])
 
+st=""
+if (m==1):
+    if (b==0):
+        st="REGRESSION ANALYSIS - Equation: y = x"
+
+    else:
+        st="REGRESSION ANALYSIS - Equation: y = x +"+str(b)
+    
+elif (m==0):
+    if (b==0):
+        st="REGRESSION ANALYSIS - Equation: y = 0"
+
+    else:
+        st="REGRESSION ANALYSIS - Equation: y = "+str(b)
+else:
+    if (b==0):
+        st="REGRESSION ANALYSIS - Equation: y = x"
+
+    else:
+        st="REGRESSION ANALYSIS - Equation: y = "+str(m)+" x + "+str(b)
+    
+
 plt.xlabel('X')
 plt.ylabel('Y')
-plt.title('Regression Points')
+plt.title(st)
 plt.grid(True)
 
 plt.show()
